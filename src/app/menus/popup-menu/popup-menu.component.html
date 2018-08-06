@@ -1,0 +1,8 @@
+<li *ngFor="let item of menu">
+  <app-menu-item
+    [ngClass]="{'vertical-menu': menuService.isVertical }"
+    [item]="item" class="in-popup"
+  >
+
+  </app-menu-item>
+</li>

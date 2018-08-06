@@ -1,0 +1,25 @@
+<a *ngFor= 'let icon of applicationConfigService.socialIcons'
+  [href]= "icon.link"
+  [title]= "icon.alt">
+  <img
+    class="top-image"
+    [src]="icon.imageFile"
+    [alt]="icon.alt"
+  >
+</a>
+
+<div *ngIf="applicationConfigService.showLanguageSelector">
+  <!-- <img class="flag-image" src="assets/flag.png" alt="flag"> -->
+  <span class="fa fa-user"></span>
+  <span> Lang </span> <span class="glyphicon glyphicon-chevron-down"></span>
+
+</div>
+
+<div *ngIf="applicationConfigService.showUserControls">
+    <span>SIGN IN</span>
+
+</div>
+<div *ngIf="applicationConfigService.showUserControls">
+  <span>Swarndeep kumar</span>
+  <span class="sign-out" (click)="signOut()">SIGN OUT</span>
+</div>

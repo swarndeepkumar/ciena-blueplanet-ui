@@ -1,0 +1,22 @@
+<div *appScreenBelowLarge class="title-bar-small">
+  <span class="fa fa-bars fa-10x" style="color: #FFFFFF" (click)="menuService.toggleLeftSideMenu()"></span>
+  <!-- <i class="fas fa-bars"></i> -->
+  <div class="small-image-holder">
+    <!-- <img class="small-image" src="assets/logo.svg"> -->
+    <span style="background-color: #354351;">
+      <font size="5" color="#008FE0">blue</font>
+      <font size="5" color="#FFFFFF">planet</font></span>
+  </div>
+  <span class="fa fa-ellipsis-v fa-10x" style="color: #FFFFFF"></span>
+</div>
+<div *appScreenLarge class="title-bar user-title-bar">
+   <!-- <img src="assets/logo.svg" height="64px" width="163" alt="Ciena Logo">-->
+   <span style="background-color: #354351; padding-top: 10px;"><font size="8" color="#008FE0">blue</font><font size="8" color="#FFFFFF">planet</font></span>
+    <div class="menu-area">
+      
+      <!-- <ps-top-bar></ps-top-bar> -->
+      <app-top-bar></app-top-bar>
+      <app-menu *ngIf="!menuService.isVertical"></app-menu>
+    </div>
+
+</div>

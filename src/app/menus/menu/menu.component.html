@@ -1,0 +1,18 @@
+<nav>
+  <ul>
+    <li *ngFor="let item of menuService.items">
+      <app-menu-item [item]="item"
+                     [ngClass]="{'vertical-menu': menuService.isVertical }"
+                     [parentIsPopup]="false">
+      </app-menu-item>
+    </li>
+  </ul>
+</nav>
+<button
+  *ngIf="!menuService.showingLeftSideMenu"
+  class="btn btn-sm"
+  [ngClass]="{'horizontal': !menuService.isVertical}"
+  (click)= "menuService.toggleMenuOrientation()">
+  <span *ngIf="menuService.isVertical" class="fa fa-angle-double-up fa-2x"></span>
+  <span *ngIf="!menuService.isVertical" class="fa fa-angle-double-left fa-2x"></span>
+</button>
